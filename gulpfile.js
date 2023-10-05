@@ -105,3 +105,4 @@ gulp.task('watch', function() {
     gulp.watch(paths.src.js).on('change', browserSync.reload);
     gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
+exports.build = series(scssTask, jsTask);
